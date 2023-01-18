@@ -19,11 +19,11 @@ namespace MLG.API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
             services.AddDbContext<AppDbContext>(options =>
-               options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
+               options.UseSqlServer(config.GetConnectionString("DBConnection"))
             );
 
             services.AddDbContext<AppDbContextForSP>(options =>
-               options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
+               options.UseSqlServer(config.GetConnectionString("DBConnection"))
             );
             
             //services.AddScoped<ITokenService, TokenService>();

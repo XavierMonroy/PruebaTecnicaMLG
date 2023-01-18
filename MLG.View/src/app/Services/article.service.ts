@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 //import { AccountService } from './account.service';
 import { urlAPI } from '../app.constants';
 import { ArticleInterface } from '../Interface/ArticleInterface';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class ArticleService{
         //private accountService: AccountService
     ) { }
 
-    getAllArticlesByStore(FKStore : number): Observable<ArticleInterface[]>{
-        return this.http.get<ArticleInterface[]>(urlAPI + 'articles/GetAllArticlesByStore/' + FKStore);    
+    getAllArticlesByStore(): Observable<ArticleInterface[]>{
+        return this.http.get<ArticleInterface[]>(urlAPI + 'articles/GetAllArticles');    
     }
 }

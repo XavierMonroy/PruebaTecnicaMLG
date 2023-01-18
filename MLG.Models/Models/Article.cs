@@ -32,6 +32,9 @@ namespace MLG.Models.Models
         public bool? IsAvailable { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime LastUpdated { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string ArticleName { get; set; }
 
         [InverseProperty(nameof(ArticleStore.FKArticleNavigation))]
         public virtual ICollection<ArticleStore> ArticleStores { get; set; }

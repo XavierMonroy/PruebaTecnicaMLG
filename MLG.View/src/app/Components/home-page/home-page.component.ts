@@ -1,6 +1,6 @@
 import { ArticleInterface } from './../../Interface/ArticleInterface';
-import { ArticleService } from 'src/app/services/article.service';
 import { Component, OnInit } from '@angular/core';
+import { ArticleService } from 'src/app/Services/article.service';
 
 @Component({
   selector: 'app-home-page',
@@ -22,7 +22,7 @@ export class HomePageComponent implements OnInit {
   }
 
   readArticles(){
-    this.articleService.getAllArticlesByStore(1).subscribe((response) =>{
+    this.articleService.getAllArticlesByStore().subscribe((response) =>{
       if (response.length > 0) {
         this.articles = [];
         this.articles = response;

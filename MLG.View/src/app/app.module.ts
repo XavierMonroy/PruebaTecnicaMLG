@@ -7,6 +7,7 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import { ArticlesComponent } from './Components/articles/articles.component';
 import { CustomersComponent } from './Components/customers/customers.component';
 import { StoreComponent } from './Components/store/store.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StoreComponent } from './Components/store/store.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

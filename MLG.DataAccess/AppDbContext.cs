@@ -40,6 +40,8 @@ namespace MLG.DataAccess
 
             modelBuilder.Entity<Article>(entity =>
             {
+                entity.Property(e => e.ArticleName).IsUnicode(false);
+
                 entity.Property(e => e.Code).IsUnicode(false);
 
                 entity.Property(e => e.Description).IsUnicode(false);

@@ -12,6 +12,7 @@ using System.Text;
 using MLG.API.Interfaces;
 using Microsoft.Data.SqlClient;
 using MLG.Models.StoredProcedures;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MLG.API.Controllers
 {
@@ -51,11 +52,23 @@ namespace MLG.API.Controllers
 
 
         [HttpGet("GetAllArticles")]
-        public async Task<ActionResult<Article>> GetAllArticles()
+        [AllowAnonymous]
+        public async Task<ActionResult<ArticleViewModel>> GetAllArticles()
         {
             try
             {
-                var articles = await _context.Articles.ToListAsync();
+                List<ArticleViewModel> articles = await _context.Articles.Select(e => new ArticleViewModel
+                {
+                    PKArticle = e.PKArticle,
+                    ArticleName = e.ArticleName,
+                    Code = e.Code,
+                    Description = e.Description,
+                    Price = e.Price,
+                    Image = e.Image,
+                    Stock = e.Stock,
+                    LastUpdated = e.LastUpdated,
+                    IsAvailable = (bool)e.IsAvailable
+                }).ToListAsync();
 
                 return Ok(articles);
             }
