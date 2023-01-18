@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace MLG.API.ViewModels
 {
-    public class LoginViewModel
+    public class ArticlesDropDownModel
     {
         [Required]
-        public string User { get; set; }
-
+        public int PKArticle { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string Description { get; set; }
     }
 }

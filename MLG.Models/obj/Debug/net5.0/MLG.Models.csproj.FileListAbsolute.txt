@@ -19,7 +19,6 @@ C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\bin\Debug\net5.0\MLG.Mod
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\bin\Debug\net5.0\MLG.Models.dll
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\bin\Debug\net5.0\ref\MLG.Models.dll
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\bin\Debug\net5.0\MLG.Models.pdb
-C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.csproj.AssemblyReference.cache
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.AssemblyInfoInputs.cache
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.AssemblyInfo.cs
@@ -28,3 +27,4 @@ C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Mod
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\ref\MLG.Models.dll
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.pdb
 C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.genruntimeconfig.cache
+C:\Users\fenix\source\repos\PruebaTecnicaMLG\MLG.Models\obj\Debug\net5.0\MLG.Models.csproj.AssemblyReference.cache

@@ -8,8 +8,8 @@ namespace MLG.API.ViewModels
 {
     public class UserViewModel
     {
-        public string username { get; set; }
-
+        public string Username { get; set; }
+        public int FKRole { get; set; }
         public string Token { get; set; }
     }
 }

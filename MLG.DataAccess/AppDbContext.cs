@@ -76,7 +76,11 @@ namespace MLG.DataAccess
             {
                 entity.Property(e => e.Address).IsUnicode(false);
 
+                entity.Property(e => e.IsAvailable).HasDefaultValueSql("((1))");
+
                 entity.Property(e => e.LastName).IsUnicode(false);
+
+                entity.Property(e => e.LastUpdated).HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.Name).IsUnicode(false);
 

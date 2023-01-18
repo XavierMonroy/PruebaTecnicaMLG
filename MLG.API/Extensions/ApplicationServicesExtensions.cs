@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MLG.API.Interfaces;
+using MLG.API.Repositories;
 
 namespace MLG.API.Extensions
 {
@@ -19,9 +21,15 @@ namespace MLG.API.Extensions
             services.AddDbContext<AppDbContext>(options =>
                options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
             );
+
+            services.AddDbContext<AppDbContextForSP>(options =>
+               options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
+            );
             
             //services.AddScoped<ITokenService, TokenService>();
-            //services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IStoreRepository, StoreRepository>();
+            services.AddScoped<IArticleRepository, ArticleRepository>();
 
             return services;
         }

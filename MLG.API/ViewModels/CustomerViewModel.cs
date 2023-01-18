@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace MLG.API.ViewModels
 {
-    public class RegisterViewModel
+    public class CustomerViewModel
     {
+        [Required]
+        public int PKCustomer { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -20,5 +22,7 @@ namespace MLG.API.ViewModels
         public string Password { get; set; }
         [Required]
         public int FKRole { get; set; }
+        public DateTime LastUpdated { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }
