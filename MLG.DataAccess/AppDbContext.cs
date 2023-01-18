@@ -30,7 +30,7 @@ namespace MLG.DataAccess
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=XAVIER\\JEXSOLUTIONS;Database=DBMLG;Trusted_Connection=True;Integrated Security=SSPI;User=sa;Password=16400958;Encrypt=false;");
+                optionsBuilder.UseSqlServer("Server=MXGDLM0MESQL01;Database=DBMLG;Trusted_Connection=True;");
             }
         }
 
