@@ -1,0 +1,93 @@
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#men" class="">Articles</a></li>
+                        <li class="scroll-to-section"><a href="#women" class="">Customers</a></li>
+                        <li class="scroll-to-section"><a href="#kids" class="">Stores</a></li>       
+
+                        <li class="scroll-to-section"><a href="#explore">Login</a></li>
+                   
+                        <li class="submenu">
+                            <img src="./assets/img/cart.png" id="img-carrito">
+                            <div id="carrito">                          
+                                <table id="list-articles" class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let article of articlesLocalStorage">
+                                            <td>
+                                                <img src="{{article.image}}" width="100">
+                                            </td>
+                                            <td>{{article.articleName}}</td>
+                                            <td>{{article.price}}</td>
+                                            <td>{{article.count}}</td>
+                                            <td>
+                                                <a href="#" class="borrar-curso" (click)="fnDeleteArticle(article.pkArticle)" > X </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <a href="#" id="vaciar-carrito" class="button u-full-width" (click)="fnDeleteCart()">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                        
+                    </ul>        
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="list-articles" class="container">
+    <h1 id="encabezado" class="encabezado text-center">Articles</h1>
+    
+    <div class="cards">
+        <span *ngFor="let article of articles">
+            <div class="card">
+                <img src="https://elcomercio.pe/resizer/55PMfYRyBa4wILpZdf2B_2TJea0=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/776CY2RULZEHDPO3T44RJOVPTE.jpg" class="img-article u-full-width">
+                <div class="info-card">
+                    <h4>{{ article.articleName }}</h4>
+                    <p class="lblDescription">{{ article.description }}</p>
+                    <img src="./assets/img/estrellas.png">
+                    <p class="lblPrice">$ {{ article.price }}</p>
+                    <a href="#" class="u-full-width button-primary button input agregar-carrito" (click)="fnAddArticleinLocalStorage(article)">Add to cart</a>
+                </div>
+            </div> 
+        </span>
+    </div>
+</div> 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

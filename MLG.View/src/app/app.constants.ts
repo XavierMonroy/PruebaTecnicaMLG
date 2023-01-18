@@ -1,0 +1,1 @@
+export const urlAPI = "https://localhost:44363/api/"; // STG

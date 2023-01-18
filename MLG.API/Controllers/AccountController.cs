@@ -146,11 +146,12 @@ namespace MLG.API.Controllers
                 {
                     FKCustomer = userArticleData.FKCustomer,
                     FKArticle = userArticleData.FKArticle,
+                    Date = DateTime.Now,
                     LastUpdated = DateTime.Now,
                     IsAvailable = userArticleData.IsAvailable
                 };
 
-                _context.CustomerArticles.Add(userArticle);
+                //_context.CustomerArticles.Add(userArticle);
                 await _context.SaveChangesAsync();
 
                 return Ok("ResponseMessages.SuccessfulCreation");

@@ -81,7 +81,7 @@ namespace MLG.API.Controllers
                     IsAvailable = articleData.IsAvailable
                 };
 
-                _context.Articles.Add(article);
+                //_context.Articles.Add(article);
                 await _context.SaveChangesAsync();
 
                 return Ok("ResponseMessages.SuccessfulCreation");
@@ -129,7 +129,7 @@ namespace MLG.API.Controllers
                     IsAvailable = articleStoreData.IsAvailable
                 };
 
-                _context.ArticleStores.Add(articleStore);
+                //_context.ArticleStores.Add(articleStore);
                 await _context.SaveChangesAsync();
 
                 return Ok("ResponseMessages.SuccessfulCreation");
