@@ -1,0 +1,15 @@
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\bin\Debug\net5.0\MLG.DataAccess.deps.json
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\bin\Debug\net5.0\MLG.DataAccess.dll
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\bin\Debug\net5.0\ref\MLG.DataAccess.dll
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\bin\Debug\net5.0\MLG.DataAccess.pdb
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.csproj.AssemblyReference.cache
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.AssemblyInfoInputs.cache
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.AssemblyInfo.cs
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.dll
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\ref\MLG.DataAccess.dll
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.pdb
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\bin\Debug\net5.0\MLG.Models.dll
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\bin\Debug\net5.0\MLG.Models.pdb
+C:\Users\fenix\source\repos\MLG.API\MLG.DATA\obj\Debug\net5.0\MLG.DataAccess.csproj.CopyComplete
