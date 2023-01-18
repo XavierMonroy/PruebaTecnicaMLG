@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj": {}
+    "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj": {
+    "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj",
+        "projectUniqueName": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj",
         "projectName": "MLG.API",
-        "projectPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj",
-        "packagesPath": "C:\\Users\\fenix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.API\\obj\\",
+        "projectPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.API\\MLG.API.csproj",
+        "packagesPath": "C:\\Users\\3124425\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fenix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\3124425\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj"
+              "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj"
               },
-              "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj": {
-                "projectPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj"
+              "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj": {
+                "projectPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj"
               }
             }
           }
@@ -104,24 +104,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj": {
+    "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj",
         "projectName": "MLG.DataAccess",
-        "projectPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\fenix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.DataAccess\\MLG.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\3124425\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fenix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\3124425\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -136,8 +136,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj": {
-                "projectPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj"
+              "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj": {
+                "projectPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj"
               }
             }
           }
@@ -196,24 +196,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj": {
+    "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj",
+        "projectUniqueName": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj",
         "projectName": "MLG.Models",
-        "projectPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj",
-        "packagesPath": "C:\\Users\\fenix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fenix\\source\\repos\\PruebaTecnicaMLG\\MLG.Models\\obj\\",
+        "projectPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\MLG.Models.csproj",
+        "packagesPath": "C:\\Users\\3124425\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\3124425\\source\\repos\\XavierMonroy\\PruebaTecnicaMLG\\MLG.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fenix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\3124425\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -294,7 +294,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
