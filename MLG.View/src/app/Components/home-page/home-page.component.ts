@@ -27,6 +27,7 @@ export class HomePageComponent implements OnInit {
         this.articles = [];
         this.articles = response;
       }
+      console.log(response);
     });
   }
 

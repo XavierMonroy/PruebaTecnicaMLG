@@ -71,7 +71,7 @@ namespace MLG.API.Controllers
             }
         }
 
-        [HttpPost("createStore")]
+        [HttpPost("CreateStore")]
         public async Task<IActionResult> CreateStore(Store storeData)
         {
             try
@@ -95,7 +95,7 @@ namespace MLG.API.Controllers
             }
         }
 
-        [HttpPut("updateStore")]
+        [HttpPut("UpdateStore")]
         public async Task<IActionResult> UpdateStore(Store storeData)
         {
             try

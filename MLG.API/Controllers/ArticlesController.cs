@@ -52,7 +52,6 @@ namespace MLG.API.Controllers
 
 
         [HttpGet("GetAllArticles")]
-        [AllowAnonymous]
         public async Task<ActionResult<ArticleViewModel>> GetAllArticles()
         {
             try

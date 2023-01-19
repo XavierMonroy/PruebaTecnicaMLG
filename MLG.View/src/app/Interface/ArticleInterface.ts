@@ -1,11 +1,11 @@
 export interface ArticleInterface {
     pkArticle:      number
-    code:           string;
     articleName:    string;
+    code:           string;
     description?:   string;
     price:          number;
     image:          string;
     stock:          number;
-    IsAvailable:    boolean;
-    LastUpdated:    Date;
+    lastUpdated:    Date;
+    isAvailable:    boolean;
 }

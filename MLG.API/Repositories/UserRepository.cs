@@ -35,8 +35,13 @@ namespace MLG.API.Repositories
             parms.Add(new SqlParameter { ParameterName = "Name", Value = customer.Name });
             parms.Add(new SqlParameter { ParameterName = "LastName", Value = customer.LastName });
             parms.Add(new SqlParameter { ParameterName = "Address", Value = customer.Address });
-            parms.Add(new SqlParameter { ParameterName = "User", Value = customer.User.ToLower() });
-            parms.Add(new SqlParameter { ParameterName = "Password", Value = customer.Password });
+
+            if (isUpdate)
+            {
+                parms.Add(new SqlParameter { ParameterName = "User", Value = customer.User.ToLower() });
+                parms.Add(new SqlParameter { ParameterName = "Password", Value = customer.Password });
+            }
+
             parms.Add(new SqlParameter { ParameterName = "LastUpdated", Value = DateTime.Now });
             parms.Add(new SqlParameter { ParameterName = "IsAvailable", Value = customer.IsAvailable });
 

@@ -64,7 +64,7 @@ namespace MLG.API.Controllers
             }
         }
 
-        [HttpPost("register")]
+        [HttpPost("Register")]
         public async Task<IActionResult> Register(CustomerViewModel customer)
         {
             try
@@ -90,14 +90,14 @@ namespace MLG.API.Controllers
             }
         }
 
-        [HttpPut("updateCustomer")]
+        [HttpPut("UpdateCustomer")]
         public async Task<IActionResult> UpdateCustomer(CustomerViewModel customer)
         {
             try
             {
                 List<SqlParameter> parms = _userService.GetParemeterForCustomer(customer, true);
 
-                var results = await _context.Database.ExecuteSqlRawAsync("up_ChgCustomerById @PKCustomer, @Name, @LastName, @Address, @User, @Password, @LastUpdated, @Available", parms.ToArray());
+                var results = await _context.Database.ExecuteSqlRawAsync("up_ChgCustomerById @PKCustomer, @Name, @LastName, @Address, @LastUpdated, @Available", parms.ToArray());
 
                 if (results == 1)
                 {

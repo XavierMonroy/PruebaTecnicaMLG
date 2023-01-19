@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace OLE4QIEWeb.Middleware
+namespace MLG.API.Middleware
 {
     public class ResponseMiddleware
     {
@@ -50,52 +50,42 @@ namespace OLE4QIEWeb.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            List<string> ignoreRequestList = new List<string>();
-            ignoreRequestList.Add("/api/components/fnGetTemplate");
-            ignoreRequestList.Add("/api/Components/fnGetTemplate");
 
-            if (ignoreRequestList.Contains(context.Request.Path))
-            {
-                await _next(context);
-            }
+            if (IsSwagger(context))
+                await this._next(context);
             else
             {
-                if (IsSwagger(context))
-                    await this._next(context);
-                else
+                var existingBody = context.Response.Body;
+
+                using (var newBody = new MemoryStream())
                 {
-                    var existingBody = context.Response.Body;
+                    context.Response.Body = newBody;
 
-                    using (var newBody = new MemoryStream())
+                    try
                     {
-                        context.Response.Body = newBody;
+                        await _next(context);
 
-                        try
-                        {
-                            await _next(context);
+                        var newResponse = await FormatResponse(context.Response);
 
-                            var newResponse = await FormatResponse(context.Response);
+                        context.Response.Body = new MemoryStream();
+                        newBody.Seek(0, SeekOrigin.Begin);
+                        context.Response.Body = existingBody;
 
-                            context.Response.Body = new MemoryStream();
-                            newBody.Seek(0, SeekOrigin.Begin);
-                            context.Response.Body = existingBody;
+                        // Send modified content to the response body.     
+                        await context.Response.WriteAsync(newResponse);
 
-                            // Send modified content to the response body.     
-                            await context.Response.WriteAsync(newResponse);
+                    }
+                    catch (Exception ex)
+                    {
+                        var response = new ErrorDetails(context.Response.StatusCode, ex.Message);
+                        var newResponse = JsonConvert.SerializeObject(response);
 
-                        }
-                        catch (Exception ex)
-                        {
-                            var response = new ErrorDetails(context.Response.StatusCode, ex.Message);
-                            var newResponse = JsonConvert.SerializeObject(response);
+                        context.Response.Body = new MemoryStream();
+                        newBody.Seek(0, SeekOrigin.Begin);
+                        context.Response.Body = existingBody;
 
-                            context.Response.Body = new MemoryStream();
-                            newBody.Seek(0, SeekOrigin.Begin);
-                            context.Response.Body = existingBody;
-
-                            // Send modified content to the response body.     
-                            await context.Response.WriteAsync(newResponse);
-                        }
+                        // Send modified content to the response body.     
+                        await context.Response.WriteAsync(newResponse);
                     }
                 }
             }

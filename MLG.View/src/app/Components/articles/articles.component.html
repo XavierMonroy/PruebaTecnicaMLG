@@ -1,1 +1,184 @@
-<p>articles works!</p>
+<!-- <div class="card">
+	<p-toolbar styleClass="mb-4 divToolBar">
+		<ng-template pTemplate="left">
+			<button
+				pButton
+				pRipple
+				icon="fas fa-plus"
+				label="Add New"
+				class="p-button-success mr-2 pl-3"
+				(click)="openNew()"
+			></button>
+			<div class="catalogName">
+				<h3>Articles Catalog</h3>
+			</div>
+		</ng-template>
+	</p-toolbar>
+
+    <p-table
+        #dt
+        [value]="articles"
+        [paginator]="true"
+        [rows]="10"
+        [totalRecords]="totalRecords"
+        [loading]="loading"
+        sortMode="multiple"
+        [filterDelay]="0"
+        class="text-center"
+        dataKey="pkCostCenter"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Edit</th>
+                <th
+                    *ngFor="let col of columns"
+                    pSortableColumn="{{ col.field }}"
+                >
+                    {{ col.header }}
+                    <p-sortIcon field="{{ col.field }}"></p-sortIcon>
+                    <p-columnFilter
+                        type="text"
+                        field="{{ col.field }}"
+                        display="menu"
+                    ></p-columnFilter>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-article let-editing="editing">
+            <tr [pEditableRow]="articles">
+                <td>
+                    <button
+                        id="btnEdit"
+                        pButton
+                        pRipple
+                        type="button"
+                        icon="fas fa-pen"
+                        pInitEditableRow
+                        (click)="onEditInit(article)"
+                        class="btnEdits p-button-rounded p-button-text"
+                    ></button>
+                </td>
+                <td
+                    *ngFor="let col of columns"
+                    pSortableColumn="{{ col.field }}"
+                >
+                    <span
+                        *ngIf="
+                            col.header !== 'LASTUPDATED' &&
+                            col.header !== 'AVAILABLE'
+                        "
+                        >{{ article[col.field] }}</span
+                    >
+                    <span *ngIf="col.header === 'LASTUPDATED'">{{
+                        article.lastUpdated | date
+                    }}</span>
+                    <span *ngIf="col.header === 'AVAILABLE'"
+                        ><i
+                            class="fas"
+                            [ngClass]="{
+                                'availableTrue fa-check-circle':
+                                    article.isAvailable,
+                                'availableFalse fa-times-circle':
+                                    !article.isAvailable
+                            }"
+                        ></i
+                    ></span>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<p-dialog
+	[(visible)]="popUp"
+	[style]="{ width: '450px' }"
+	header="Article Details"
+	[modal]="true"
+	[draggable]="false"
+    [resizable]="false"
+	styleClass="p-fluid"
+>
+	<ng-template pTemplate="content">
+		<div class="p-field">
+			<label for="ArticleName">Article Name</label>
+			<input
+				type="text"
+				pInputText
+				id="ArticleName"
+				placeholder="Article Name"
+				[(ngModel)]="clonedArticle.articleName"
+				required
+				autofocus
+			/>
+		</div>
+
+		<div class="p-field text-center mt-3 mb-3">
+			<label for="available">Available</label>
+			<div class="custom-control custom-switch custom-control-info">
+				<input
+					type="checkbox"
+					name="available"
+					id="available"
+					class="custom-control-input"
+					checked="true"
+					[(ngModel)]="clonedArticle.isAvailable"
+				/>
+				<label class="custom-control-label" for="available"></label>
+			</div>
+		</div>
+	</ng-template>
+
+	<ng-template pTemplate="footer">
+		<button
+			pButton
+			pRipple
+			label="Cancel"
+			icon="fas fa-times"
+			class="p-button-text mr-3 btnCancelPopUp"
+			(click)="hideDialog()"
+		></button>
+		<button
+			pButton
+			pRipple
+			label="Save"
+			icon="fas fa-check"
+			class="p-button-text"
+			(click)="saveArticle()"
+		></button>
+	</ng-template>
+</p-dialog> -->
+
+<p-table [value]="articles" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            Articles Catalog
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Article</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Stock</th>
+            <th>Available</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-article>
+        <tr>
+            <td>{{article.articleName}}</td>
+            <td>{{article.code}}</td>
+            <td>{{article.description}}</td>
+            <td>{{article.price | currency:'USD'}}</td>
+            <td><img src="{{article.image}}" [alt]="article.image" width="100" class="shadow-4" /></td>
+            <td>{{article.stock}}</td>
+            <td>{{article.isAvailable}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="flex align-items-center justify-content-between">
+            In total there are {{articles ? articles.length : 0 }} articles.
+        </div>
+    </ng-template>
+</p-table>

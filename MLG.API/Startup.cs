@@ -16,6 +16,7 @@ using MLG.API.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using MLG.API.Middleware;
 
 namespace MLG.API
 {
@@ -31,9 +32,19 @@ namespace MLG.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var origins = new[] { "*" };
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOriginPolicy",
+                    builder => builder
+                        .WithOrigins(origins)
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
+
             services.AddApplicationServices(Configuration);
             services.AddControllers();
-            services.AddCors();
+            //services.AddCors();
             services.AddSwaggerServices(Configuration);
         }
 
@@ -53,6 +64,8 @@ namespace MLG.API
 
             //app.UseAuthentication();
             //app.UseAuthorization();
+            app.UseCors("AllowOriginPolicy");
+            app.UseMiddleware<ResponseMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

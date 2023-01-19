@@ -57,7 +57,7 @@
     <div class="cards">
         <span *ngFor="let article of articles">
             <div class="card">
-                <img src="https://elcomercio.pe/resizer/55PMfYRyBa4wILpZdf2B_2TJea0=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/776CY2RULZEHDPO3T44RJOVPTE.jpg" class="img-article u-full-width">
+                <img src="{{article.image}}" class="img-article u-full-width">
                 <div class="info-card">
                     <h4>{{ article.articleName }}</h4>
                     <p class="lblDescription">{{ article.description }}</p>

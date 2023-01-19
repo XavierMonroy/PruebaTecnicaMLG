@@ -8,6 +8,12 @@ import { ArticlesComponent } from './Components/articles/articles.component';
 import { CustomersComponent } from './Components/customers/customers.component';
 import { StoreComponent } from './Components/store/store.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormatDataInterceptor } from './Interceptors/formatData.interceptor';
+import { HeaderInterceptor } from './Interceptors/header.interceptor';
+
+import { TableModule } from 'primeng/table';
+import { ToolbarModule } from 'primeng/toolbar';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -20,9 +26,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    ToolbarModule,
+    DialogModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: FormatDataInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
