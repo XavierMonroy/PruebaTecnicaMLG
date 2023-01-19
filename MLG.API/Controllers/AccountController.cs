@@ -54,7 +54,16 @@ namespace MLG.API.Controllers
         {
             try
             {
-                var customers = await _contextSP.up_GetAllCustomers.FromSqlRaw<up_GetAllCustomers_Result>("up_GetAllCustomers").ToListAsync();
+                var customers = await _context.Customers.Select(e => new CustomerViewModel
+                {
+                    PKCustomer = e.PKCustomer,
+                    Name = e.Name,
+                    LastName = e.LastName,
+                    Address = e.Address,
+                    FKRole = e.FKRole,
+                    LastUpdated = e.LastUpdated,
+                    IsAvailable = (bool)e.IsAvailable
+                }).ToListAsync();
 
                 return Ok(customers);
             }
